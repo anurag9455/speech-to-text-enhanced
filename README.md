@@ -13,6 +13,7 @@ This project focuses on enhancing the accuracy and reliability of speech-to-text
 - [System Overview](#system-overview)
 - [Setup and Installation](#setup-and-installation)
 - [Running the Application](#running-the-application)
+- [Docker Deployment](#docker-deployment)
 - [Performance Metrics](#performance-metrics)
 - [Demonstration and Results](#demonstration-and-results)
 - [Contributions](#contributions)
@@ -63,7 +64,7 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/speech-to-text-enhanced.git
+   git clone https://github.com/anurag9455/speech-to-text-enhanced.git
    cd speech-to-text-enhanced
    ```
 
@@ -90,6 +91,25 @@ streamlit run enhanced_streamlit_speech_to_text.py
 ```
 
 This will launch the app in your browser, where you can upload an audio file and see the enhanced transcription process in action.
+
+## Docker Deployment
+
+To deploy the application using Docker, follow these steps:
+
+### Step 1: Create Docker Image
+1. Ensure you have Docker installed on your system.
+2. Build the Docker image using the following command:
+   ```bash
+   docker build -t speech-to-text-app .
+   ```
+
+### Step 2: Run Docker Container
+3. Once the image is built, run the container with the following command:
+   ```bash
+   docker run -p 8501:8501 speech-to-text-app
+   ```
+
+This will start the Streamlit app inside the Docker container and expose it on port `8501`. You can access the app by visiting `http://localhost:8501` in your browser.
 
 ## Performance Metrics
 
